@@ -2,14 +2,16 @@ Rails.application.routes.draw do
 
   get("/", { :controller => "zebra", :action => "rules" })
 
+  get("/square/new", { :controller => "zebra", :action => "giraffe" })
 
+  get("/square/results", { :controller => "zebra", :action => "elephant" })
   
- 
+end
  
 
-#get("/square/new", { :controller => "zebra", :action => "giraffe" })
 
-#get("/square/results", { :controller => "zebra", :action => "elephant" })
+
+
 #end
 
 #get("/square_root/new", { :controller => "zebra", :action => "elephant" })
