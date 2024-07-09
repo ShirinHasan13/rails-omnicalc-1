@@ -1,0 +1,7 @@
+<h1>Calculate the square of a number</h1>
+
+<%= form_with url: squares_results_path, method: :get do %>
+  <label for="giraffe">Enter a number</label>
+  <%= text_field_tag :users_number, nil, placeholder: "What number do you want to", id: "giraffe" %>
+  <%= submit_tag "Calculate square" %>
+<% end %>
