@@ -22,6 +22,11 @@ class ZebraController < ApplicationController
     @the_result = @the_num ** 0.5
     render({ :template => "game_templates/squarerootresults" })
   end
+
+  def rat
+    
+    render({ :template => "game_templates/payment" })
+  end
 end
 
 

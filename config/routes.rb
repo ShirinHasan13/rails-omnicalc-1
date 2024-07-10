@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get("/square_root/new", { :controller => "zebra", :action => "lion" })
   
   get("/square_root/results", { :controller => "zebra", :action => "tiger" })
+
+  get("/payment/new", { :controller => "zebra", :action => "rat" })
+
 end
  
 
@@ -19,7 +22,6 @@ end
 
 
 
-#get("/payment/new", { :controller => "zebra", :action => "lion" })
 
 #get("/random/new", { :controller => "zebra", :action => "tiger" })
 #end
