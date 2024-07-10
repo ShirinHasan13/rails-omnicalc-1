@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get("/payment/new", { :controller => "zebra", :action => "rat" })
 
+  get("/payment/result", { :controller => "zebra", :action => "mouse" })
+
 end
  
 
@@ -23,5 +25,5 @@ end
 
 
 
-#get("/random/new", { :controller => "zebra", :action => "tiger" })
+
 #end
