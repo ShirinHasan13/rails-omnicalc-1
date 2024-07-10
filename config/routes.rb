@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get("/square_root/new", { :controller => "zebra", :action => "lion" })
   
+  get("/square_root/results", { :controller => "zebra", :action => "tiger" })
 end
  
 
