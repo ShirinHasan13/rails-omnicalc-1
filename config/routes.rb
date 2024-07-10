@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get("/payment/new", { :controller => "zebra", :action => "rat" })
 
-  get("/payment/result", { :controller => "zebra", :action => "mouse" })
+  get("/payment/results", { :controller => "zebra", :action => "mouse" })
 
 end
  
