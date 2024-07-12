@@ -54,7 +54,17 @@ class ZebraController < ApplicationController
     render({ :template => "game_templates/payment" })
   end
 
+  def apple
+    render({ :template => "game_templates/random" })
+  end
   
+  def banana
+    @Min= params.fetch("users_min").to_f
+  
+  @Max = params.fetch("users_max").to_f
+  @random = rand(@Min..@Max)
+    render({ :template => "game_templates/randomresult" })
+  end
 end
 
 

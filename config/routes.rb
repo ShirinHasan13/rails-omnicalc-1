@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   get("/payment/results", { :controller => "zebra", :action => "mouse" })
 
+  get("/random/new", { :controller => "zebra", :action => "apple" })
+
+  get("/random/results", { :controller => "zebra", :action => "banana" })
+
 end
  
 
