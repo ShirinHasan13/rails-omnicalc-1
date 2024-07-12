@@ -8,8 +8,8 @@ class ZebraController < ApplicationController
   end
 
   def elephant
-    @the_num = params.fetch("users_number").to_f
-    @the_result = @the_num ** 2
+    @the_num = params.fetch("users_number").to_i
+  @the_result = @the_num.to_f ** 2
     render({ :template => "game_templates/squareresult" })
   end
 
@@ -18,8 +18,8 @@ class ZebraController < ApplicationController
   end
 
   def tiger
-    @the_num = params.fetch("users_number").to_f
-    @the_result = @the_num ** 0.5
+    @the_num = params.fetch("users_number").to_i
+    @the_result = @the_num.to_f ** 0.5
     render({ :template => "game_templates/squarerootresults" })
   end
 
@@ -30,13 +30,16 @@ class ZebraController < ApplicationController
 
   def mouse
     @apr = params.fetch("user_apr").to_f 
+    @apr3 = @apr.to_fs(:percentage, { :delimiter => ".", :precision => 4} )
     @apr2 = @apr / 12/ 100
     @years = params.fetch("user_years").to_f 
     @years2 = @years * 12
     @pv = params.fetch("user_pv").to_f 
+    @pv2 = @pv.to_fs(:currency, { :precision => 2 }) 
     @numerator = @pv * @apr2 * (1 + @apr2)** @years2
     @denominator = (1 + @apr2)**@years2 - 1
     @payment = @numerator / @denominator
+    @payment2 = @payment.to_fs(:currency, { :precision => 2 }) 
 
     render({ :template => "game_templates/paymentresult" })
   end
